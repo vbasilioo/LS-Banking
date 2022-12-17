@@ -1,61 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --header-height: 3.5rem;
-  --nav-width: 219px;
-  --first-color: #6923D0;
-  --first-color-light: #F4F0FA;
-  --title-color: #19181B;
-  --text-color: #58555E;
-  --text-color-light: #A5A1AA;
-  --body-color: #F9F6FD;
-  --container-color: #FFFFFF;
-  --body-font: 'Poppins', sans-serif;
-  --normal-font-size: .938rem;
-  --small-font-size: .75rem;
-  --smaller-font-size: .75rem;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-  --z-fixed: 100;
+    --body-color: #dedbdb;
+    --nav-color: #3b3333;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
 }
 
-@media screen and (min-width: 1024px) {
-    :root {
-      --normal-font-size: 1rem;
-      --small-font-size: .875rem;
-      --smaller-font-size: .813rem;
-    }
-  }
-  
-/* base CSS */
-*, ::before, ::after{
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-  
+
 body{
-    margin: var(--header-height) 0 0 0;
-    padding: 1rem 1rem 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+    height: 100vh;
     background-color: var(--body-color);
+}
+
+/*--------NAVBAR--------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
     color: var(--text-color);
-}
-  
-h3{
-    margin: 0;
-}
-  
-a{
     text-decoration: none;
 }
-  
-img{
-    max-width: 100%;
-    height: auto;
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
 }
-  
-p{
-    width:25rem;
-    height:8rem;
-    text-align: justify;
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
 }
