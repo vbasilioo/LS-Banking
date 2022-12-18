@@ -7,7 +7,7 @@ class home{
         $users = all('users');
         return [
             'view' => 'home.php',
-            'data' => ['title' => 'Home', 'users' => $users]
+            'data' => ['title' => 'Maze Bank', 'users' => $users]
        ];
     }
 }
