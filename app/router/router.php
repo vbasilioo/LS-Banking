@@ -1,14 +1,8 @@
 <?php
 
-/* Trabalhando com rotas exatas */
-
 function matchUri($uri, $routes){
     return (array_key_exists($uri, $routes)) ? [$uri => $routes[$uri]] : [];
 }
-
-/* Fim das rotas exatas */
-
-/* Trabalhando com rotas dinâmicas */
 
 function regularRoutes($uri, $routes){
     if(empty($matchedUri)){
@@ -22,8 +16,6 @@ function regularRoutes($uri, $routes){
         );
     }
 }
-
-/* Fim das rotas dinâmicas */
 
 function params($uri, $matchedUri){
     if(!empty($matchedUri)){
@@ -45,7 +37,6 @@ function paramsFormat($uri, $params){
     return $paramsData;
 }
 
-/* Requisitando e verificando as rotas */
 function router(){
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $routes = require 'routes.php';
