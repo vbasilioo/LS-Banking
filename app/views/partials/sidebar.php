@@ -1,9 +1,13 @@
-<nav>
+<nav >
     <div class="logo-name">
-        <!--<div class="logo-image">
-            <img src="/public/assets/img/mazebank.png">
-        </div>-->
-        <span class="logo_name">Maze Bank</span>
+        <div class="logo-image">
+            <img src="https://media.discordapp.net/attachments/990287612877090946/1054234340898381835/Asset_1.png?width=1189&height=559">
+        </div>
+    </div>
+
+    <div class="search">
+        <box-icon name='search-alt-2'></box-icon>
+        <input type="text" placeholder="Pesquisar">
     </div>
 
     <div class="menu-items">
@@ -36,7 +40,7 @@
         <ul class="logout-mod">
             <li><a href="#">
                 <i class='bx bx-log-out' ></i>
-                <span class="link-name">Logout</span>
+                <span class="link-name">Sair</span>
             </a></li>
         </li>
         </ul>
