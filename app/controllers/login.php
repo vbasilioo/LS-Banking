@@ -31,6 +31,16 @@ class login{
             return;
         }
 
+        if (!isset($_SESSION)) {
+            session_start();
+            return;
+        }
+
+        if (!isset($_SESSION['id'])) {
+            redirect('/');
+            return;
+        }
+
         $_SESSION['logged'] = $user;
         redirect('/home');
         return;
