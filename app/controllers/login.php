@@ -12,27 +12,37 @@ class login{
 
     public function store(){
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         if(empty($email) || empty($password)){
-            redirect('/login');
+            redirect('/');
             return;
         }
 
         $user = findBy('users', 'email', $email);
 
         if(!$user){
-            redirect('/login');
+            redirect('/');
             return;
         }
 
         if(!password_verify($password, $user->password)){
-            redirect('/login');
+            redirect('/');
+            return;
+        }
+
+        if (!isset($_SESSION)) {
+            session_start();
+            return;
+        }
+
+        if (!isset($_SESSION['id'])) {
+            redirect('/');
             return;
         }
 
         $_SESSION['logged'] = $user;
-        redirect('/');
+        redirect('/home');
         return;
     }
 }
