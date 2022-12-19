@@ -16,23 +16,23 @@
                 <i class='bx bxs-bank' ></i>
                 <span class="link-name">Início</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="../withdrawals.php">
                 <i class='bx bx-money-withdraw'></i>
                 <span class="link-name">Saques</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="../deposits.php">
                 <i class='bx bx-money'></i>
                 <span class="link-name">Depósitos</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="../transfers.php">
                 <i class='bx bx-transfer' ></i>
                 <span class="link-name">Transferências</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="../weborrow.php">
                 <i class='bx bxs-user-account'></i>
                 <span class="link-name">Empréstimos</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="../extracts.php">
                 <i class='bx bxs-wallet'></i>
                 <span class="link-name">Extratos</span>
             </a></li>
