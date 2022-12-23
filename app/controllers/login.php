@@ -6,13 +6,13 @@ class login{
     public function index(){
         return [
             'view' => 'login.php',
-            'data' => ['title' => 'Maze Bank']
+            'data' => ['title' => 'Login']
        ];
     }
 
     public function store(){
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         if(empty($email) || empty($password)){
             redirect('/');
@@ -27,16 +27,6 @@ class login{
         }
 
         if(!password_verify($password, $user->password)){
-            redirect('/');
-            return;
-        }
-
-        if (!isset($_SESSION)) {
-            session_start();
-            return;
-        }
-
-        if (!isset($_SESSION['id'])) {
             redirect('/');
             return;
         }

@@ -2,11 +2,12 @@
 
 return [
     'POST' => [
-        '/' => 'login@store',
-        '/home' => 'home@store'
+        '/login' => 'login@store'
     ],
     'GET' => [
         '/' => 'login@index',
-        '/home' => 'home@index'
+        '/user/create' => 'user@create',
+        '/user/[0-9]+' => 'user@show',
+        '/home' => 'home@index',
     ]
 ];
