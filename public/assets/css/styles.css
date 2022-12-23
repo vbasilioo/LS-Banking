@@ -242,6 +242,10 @@ nav .menu-items li a:hover .bx{
 
 /* PARTIALS > DASHBOARD */
 
+.dashboard{
+    display: flex;
+}
+
 .dashboard .dash-content{
     background-color: rgb(245, 245, 245);
     padding-top: 10px;

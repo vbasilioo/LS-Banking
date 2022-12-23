@@ -1,4 +1,4 @@
-<nav >
+<nav>
     <div class="logo-name">
         <div class="logo-image">
             <img src="https://media.discordapp.net/attachments/990287612877090946/1054234340898381835/Asset_1.png?width=1189&height=559">

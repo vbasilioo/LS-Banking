@@ -4,7 +4,7 @@
             <span class="title">Login</span>
             <form action="/login" method="POST">
                 <div class="input-field">
-                    <input type="text" name="email" placeholder="Digite seu usuário" required>
+                    <input type="text" name="username" placeholder="Digite seu usuário" required>
                     <i class='bx bxs-user icon'></i>
                 </div>
                 <div class="input-field">
