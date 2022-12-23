@@ -2,7 +2,7 @@
     <div class="forms">
         <div class="form login">
             <span class="title">Login</span>
-            <form action="/" method="POST">
+            <form action="/login" method="POST">
                 <div class="input-field">
                     <input type="text" name="email" placeholder="Digite seu usuário" required>
                     <i class='bx bxs-user icon'></i>

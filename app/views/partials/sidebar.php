@@ -16,11 +16,11 @@
                 <i class='bx bxs-bank' ></i>
                 <span class="link-name">Início</span>
             </a></li>
-            <li><a href="../withdrawals.php">
+            <li><a href="#">
                 <i class='bx bx-money-withdraw'></i>
                 <span class="link-name">Saques</span>
             </a></li>
-            <li><a href="../deposits.php">
+            <li><a href="#">
                 <i class='bx bx-money'></i>
                 <span class="link-name">Depósitos</span>
             </a></li>
