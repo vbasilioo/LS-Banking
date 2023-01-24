@@ -2,12 +2,23 @@
 
 return [
     'POST' => [
-        '/login' => 'login@store'
+        '/' => 'login@store',
+        '/home' => 'home@store',
+        '/deposits' => 'deposits@store',
+        '/plunder' => 'plunder@store',
+        '/transfers' => 'transfers@store',
+        '/extracts' => 'extracts@store',
+        '/profile' => 'profile@index',
+        '/logout' => 'logout@store'
     ],
     'GET' => [
         '/' => 'login@index',
-        '/user/create' => 'user@create',
-        '/user/[0-9]+' => 'user@show',
         '/home' => 'home@index',
+        '/plunder' => 'plunder@index',
+        '/deposits' => 'deposits@index',
+        '/transfers' => 'transfers@index',
+        '/extracts' => 'extracts@index',
+        '/profile' => 'profile@index',
+        '/logout' => 'logout@index'
     ]
 ];

@@ -3,6 +3,12 @@
 require 'bootstrap.php';
 
 try{
+
+    if($_ENV['MAINTENANCE'] === 'true'){
+        require VIEWS . 'maintenance.php';
+        die();
+    }
+
     $data = router();
 
     if(!isset($data['data'])){

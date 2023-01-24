@@ -6,20 +6,20 @@ class login{
     public function index(){
         return [
             'view' => 'login.php',
-            'data' => ['title' => 'Login']
+            'data' => ['title' => 'Maze Bank']
        ];
     }
 
     public function store(){
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_ENCODED);
 
-        if(empty($email) || empty($password)){
+        if(empty($username) || empty($password)){
             redirect('/');
             return;
         }
 
-        $user = findBy('users', 'email', $email);
+        $user = findBy('users', 'username', $username);
 
         if(!$user){
             redirect('/');

@@ -13,5 +13,7 @@
     <div class="container">
         <?php require VIEWS . $view; ?>
     </div>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

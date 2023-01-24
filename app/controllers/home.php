@@ -3,10 +3,10 @@
 namespace app\controllers;
 
 class home{
-    public function index($params){
+    public function index(){
         return [
             'view' => 'home.php',
-            'data' => ['title' => 'Home']
+            'data' => ['title' => 'Maze Bank']
        ];
     }
 }
